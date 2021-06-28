@@ -5,7 +5,7 @@ This implementation branches off from version 1.5.2 of Steve Miller's (BA: @shte
 
 Here's an example of what can be achieved using the add-on:
 
-![example](imgs/examples.png)
+<img src="imgs/examples.png" alt="example node setup" width="60%">
 
 ## Changelog
 
