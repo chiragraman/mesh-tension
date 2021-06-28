@@ -570,7 +570,7 @@ def perform_tension_operations(object: Object, depsgraph: Depsgraph) -> None:
 
     # Propagate compression
     compress_its = object.data.tension_props.compress_iterations
-    comparator = max if stretch_its > 0 else min
+    comparator = max if compress_its > 0 else min
     propagate_tension(compressed, abs(compress_its), comparator,
                       object.data[TENSION_MASK_NAME])
 
