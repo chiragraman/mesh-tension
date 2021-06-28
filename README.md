@@ -12,7 +12,7 @@ Here's an example of what can be achieved using the add-on:
 ### Version 1.5.3
 
 - **Code refactor**  
-Remove duplicate code through reusable functions. Remove multiple return paths. Add type annotations and Pep8 compliant documentation. Clean up code execution paths.
+Remove duplicate code through reusable functions and module level constants. Remove multiple return paths. Add type annotations and Pep8 compliant documentation. Clean up code execution paths. Simplify data-structures replacing lists with dictionaries.
 - **Tension Props Setup and Cleanup**  
 Explicitly add, and remove, tension properties on objects in response to enabling or disabling mesh tension. The addition didn't work for me on 2.93 until the frame change handlers were triggered. Disabling tension also left the tension properties on the object, these are now cleaned up.
 - **Independent stretch and compression propagation**  
