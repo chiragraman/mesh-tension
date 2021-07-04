@@ -158,7 +158,6 @@ class TensionMeshPanel(Panel):
 
     def draw(self, context: Context) -> None:
         """ Draw UI elements into the panel UI layout """
-        global generative_modifiers
         if context.scene.render.use_lock_interface:
             self.layout.use_property_split = True
             ob = context.object
