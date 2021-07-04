@@ -46,10 +46,10 @@ GENERATIVE_MODIFIERS = [
 
 logger = logging.getLogger(__name__)
 pristine_meshes = dict()
+rendering = False
 skip = False
 skip_depsgraph_pre = False
 skip_depsgraph_post = False
-rendering = False
 
 
 ## Type Aliases
