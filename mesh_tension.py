@@ -713,12 +713,19 @@ def register():
     bpy.utils.register_class(TensionScenePanel)
 
     # App handlers
+    if not load_post in bpy.app.handlers.load_post:
     bpy.app.handlers.load_post.append(load_post)
+    if not frame_change_pre in bpy.app.handlers.frame_change_pre:
     bpy.app.handlers.frame_change_pre.append(frame_change_pre)
+    if not frame_change_post in bpy.app.handlers.frame_change_post:
     bpy.app.handlers.frame_change_post.append(frame_change_post)
+    if not render_pre in bpy.app.handlers.render_pre:
     bpy.app.handlers.render_pre.append(render_pre)
+    if not render_post in bpy.app.handlers.render_post:
     bpy.app.handlers.render_post.append(render_post)
+    if not depsgraph_update_pre in bpy.app.handlers.depsgraph_update_pre:
     bpy.app.handlers.depsgraph_update_pre.append(depsgraph_update_pre)
+    if not depsgraph_update_post in bpy.app.handlers.depsgraph_update_post:
     bpy.app.handlers.depsgraph_update_post.append(depsgraph_update_post)
 
 
@@ -739,12 +746,19 @@ def unregister():
     bpy.utils.unregister_class(TensionScenePanel)
 
     # App handlers
+    if load_post in bpy.app.handlers.load_post:
     bpy.app.handlers.load_post.remove(load_post)
+    if frame_change_pre in bpy.app.handlers.frame_change_pre:
     bpy.app.handlers.frame_change_pre.remove(frame_change_pre)
+    if frame_change_post in bpy.app.handlers.frame_change_post:
     bpy.app.handlers.frame_change_post.remove(frame_change_post)
+    if render_pre in bpy.app.handlers.render_pre:
     bpy.app.handlers.render_pre.remove(render_pre)
+    if render_post in bpy.app.handlers.render_post:
     bpy.app.handlers.render_post.remove(render_post)
+    if depsgraph_update_pre in bpy.app.handlers.depsgraph_update_pre:
     bpy.app.handlers.depsgraph_update_pre.remove(depsgraph_update_pre)
+    if depsgraph_update_post in bpy.app.handlers.depsgraph_update_post:
     bpy.app.handlers.depsgraph_update_post.remove(depsgraph_update_post)
 
 
