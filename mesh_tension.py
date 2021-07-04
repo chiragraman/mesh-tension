@@ -5,7 +5,7 @@ Compute tension at mesh vertices and store in vertex colours and vertex groups.
 bl_info = {
     "name": "Mesh Tension",
     "author": "Chirag Raman, based on Steve Miller's original implementation",
-    "version": (1, 5, 3),
+    "version": (1, 5, 4),
     "blender": (2, 93, 0),
     "location": "Properties > Mesh Data",
     "description": "Store mesh tension in vertex colours and vertex groups",
