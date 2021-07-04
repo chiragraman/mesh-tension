@@ -12,7 +12,7 @@ bl_info = {
     "category": "Mesh",
 }
 
-import warnings
+import logging
 from functools import reduce
 from typing import Callable, Mapping, Sequence, Set, Tuple
 
@@ -44,6 +44,7 @@ GENERATIVE_MODIFIERS = [
 
 ## Module variables
 
+logger = logging.getLogger(__name__)
 pristine_meshes = dict()
 skip = False
 skip_depsgraph_pre = False
@@ -319,7 +320,7 @@ def ensure_vertex_colors(
                 object.data.vertex_colors.remove(object.data.vertex_colors[name])
             else:
                 create = False
-                warnings.warn(f"Found existing vertex colors {name}, and not overwriting.")
+                logger.debug(f"Found existing vertex colors {name}, and not overwriting.")
         # Create the new colors
         if create:
             object.data.vertex_colors.new(name=name)
@@ -344,7 +345,7 @@ def ensure_vertex_groups(
                 object.vertex_groups.remove(object.vertex_groups[name])
             else:
                 create = False
-                warnings.warn(f"Found existing vertex group {name}, and not overwriting.")
+                logger.debug(f"Found existing vertex group {name}, and not overwriting.")
         # Create the new group if required
         if create:
             object.vertex_groups.new(name=name)
