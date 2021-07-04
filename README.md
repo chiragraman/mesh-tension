@@ -1,5 +1,5 @@
 # Blender Mesh Tension Add-On
-[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/licenses/MIT) ![](https://img.shields.io/badge/version-1.5.3-blue) ![](https://img.shields.io/badge/blender-2.93-orange)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/licenses/MIT) ![](https://img.shields.io/badge/version-1.5.4-blue) ![](https://img.shields.io/badge/blender-2.93-orange)
 
 This implementation branches off from version 1.5.2 of Steve Miller's (BA: @shteeve) implementation of a Blender add-on for computing mesh tension. You can follow the development [over on BlenderArtists](https://blenderartists.org/t/revised-mesh-tension-add-on/1239091/45). For using, simply install the `mesh_tension.py` script as an add-on through the Blender preferences.
 
@@ -8,6 +8,14 @@ Here's an example of what can be achieved using the add-on:
 <img src="imgs/examples.png" alt="example node setup" width="60%">
 
 ## Changelog
+
+### Version 1.5.4
+
+Minor code cleanup:
+- Use logger instead of warnings
+- Fix `load_post` to use `bpy.context.scene` since the arg is None.
+- Add checks before registering and unregistering handlers
+
 
 ### Version 1.5.3
 
