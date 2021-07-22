@@ -5,7 +5,7 @@ Compute tension at mesh vertices and store in vertex colours and vertex groups.
 bl_info = {
     "name": "Mesh Tension",
     "author": "Chirag Raman, based on Steve Miller's original implementation",
-    "version": (1, 5, 4),
+    "version": (1, 5, 5),
     "blender": (2, 93, 0),
     "location": "Properties > Mesh Data",
     "description": "Store mesh tension in vertex colours and vertex groups",
@@ -636,7 +636,7 @@ def should_handle_frame_change(scene: Scene) -> bool:
     skip_condition = (skip
                       or not scene.tension_props.enabled
                       or not scene.render.use_lock_interface)
-    return skip_condition
+    return not skip_condition
 
 
 @persistent
