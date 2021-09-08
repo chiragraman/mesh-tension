@@ -12,6 +12,7 @@ bl_info = {
     "category": "Mesh",
 }
 
+
 import logging
 from functools import reduce
 from typing import Callable, Dict, Mapping, Optional, Sequence, Set, Tuple
